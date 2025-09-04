@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment</title>
+        <style>
+          body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #46beed;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsla(215, 23%, 90%, 0.901);
+  width: 90%; 
+  max-width: 600px; 
+  height: 60vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 20px; 
+}
+
+.head {
+  font-size: 4vw; 
+  font-weight: 500;
+  text-align: center;
+}
+
+.stopwatch {
+  font-size: 5vw;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 2.5vw; 
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1; 
+  min-width: 100px; 
+}
+
+.start {
+  background-color: #af4c4c;
+  color: white;
+}
+
+.stop {
+  background-color: #3666ce;
+  color: white;
+}
+
+.reset {
+  background-color: #2fae49;
+  color: white;
+}
+        </style>
+      </head>
+      
+      
+      <body>
+
+
+        <section class="main">
+          <div class="container">
+            <h2 class="head"> Javascript Stopwatch</h2>
+            <div class="parent">
+              <div class="stopwatch">00 : 00 : 00</div>
+              <div class="buttons">
+                <button class="stop">Stop</button>
+                <button class="start">Start</button>
+                <button class="reset">Reset</button>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+      
+      
+      
+      
+      <script>
+          let stopwatch = document.querySelector(".stopwatch");
+          let startButton = document.querySelector(".start");
+          let stopButton = document.querySelector(".stop");
+          let resetButton = document.querySelector(".reset");
+    
+          let timer;
+          let [minutes, seconds, milliseconds] = [0, 0, 0];
+    
+          function updateDisplay() {
+            stopwatch.textContent = `${String(minutes).padStart(2, "0")} : ${String(
+              seconds
+            ).padStart(2, "0")} : ${String(milliseconds).padStart(2, "0")}`;
+          }
+    
+          function startTimer() {
+            if (timer) return;
+            timer = setInterval(() => {
+              milliseconds++;
+              if (milliseconds === 100) {
+                milliseconds = 0;
+                seconds++;
+              }
+              if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+              }
+              updateDisplay();
+            }, 10);
+          }
+    
+          function stopTimer() {
+            clearInterval(timer);
+            timer = null;
+          }
+    
+          function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            [minutes, seconds, milliseconds] = [0, 0, 0];
+            updateDisplay();
+          }
+    
+          startButton.addEventListener("click", startTimer);
+          stopButton.addEventListener("click", stopTimer);
+          resetButton.addEventListener("click", resetTimer);
+    
+          updateDisplay();
+        </script>
+      
+    
+    </body>
+    <div id="smartyContainer" style="position: absolute; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-size: initial;"></div>
+</html>
+
+
+
+
+
+
+
+
+
+
+

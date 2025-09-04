@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        /* ✅ Input + Button ek hi line me */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #inp {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px 0 0 8px;  /* left rounded only */
+            outline: none;
+        }
+
+        button {
+            padding: 0 20px; /* sirf horizontal padding */
+            background-color: #007bff;
+            border: none;
+            border-radius: 0 8px 8px 0;  /* right rounded only */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;   /* ✅ input ke barabar */
+        }
+
+        button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #show {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .abc {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .abc:hover {
+            transform: scale(1.03);
+        }
+
+        .abc img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .abc p {
+            margin: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .abc p:first-of-type {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            #inp {
+                width: 70%;
+            }
+            .abc {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>News Application</h1>
+        <div class="search-container">
+            <input placeholder="Enter a topic or Keyword" type="text" id="inp">
+            <button onclick="searchNews()">
+                <img src="https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-search-icon-png-image_924820.jpg" alt="search">
+            </button>
+        </div>
+    </center>
+
+    <div id="show"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+        

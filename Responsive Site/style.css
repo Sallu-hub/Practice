@@ -1,0 +1,331 @@
+.collapse{
+padding-top: 15px;
+padding-bottom: 15px;
+margin-top: -19px;
+margin-bottom: -19px;
+}
+
+/* .had{
+    padding-bottom: 5px;
+    
+} */
+
+.bt{
+    padding: 15px;
+    width: 10px;
+    align-content: center;
+}
+
+.card_carsouel{
+    display: inline-block;
+}
+
+.card{
+    display: inline-block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card-carousel {
+    text-align: center; /* Center cards horizontally */
+}
+
+.card {
+    display: inline-block; /* Change display to inline-block */
+    width: 300px; /* Default width */
+    margin: 10px; /* Add margin between cards */
+    border-radius: 25px;
+    border: none; /* Remove border color */
+    overflow: hidden; /* Ensures border-radius effect */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale on hover */
+}
+
+.card-img-top {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Cover the entire area */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* One card per row */
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+#row {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+#coll {
+    flex: 1; 
+    max-width: 300px; 
+}
+
+
+#cardd {
+    height: 100%; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s;
+}
+
+#cardd:hover {
+    transform: scale(1.05); 
+}
+
+#cardd-img-top {
+    width: 100%; 
+    height: auto; 
+}
+
+
+@media (max-width: 768px) {
+    #coll {
+        flex: 1 0 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    #coll {
+        flex: 1 0 90%; 
+    }
+}
+
+
+
+/* 02 */
+
+
+
+#row {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+#colll {
+    flex: 1; 
+    max-width: 300px; 
+}
+
+
+#carddd {
+    height: 100%; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s;
+}
+
+#carddd:hover {
+    transform: scale(1.05); 
+}
+
+#carddd-img-top {
+    width: 100%; 
+    height: auto; 
+}
+
+
+@media (max-width: 768px) {
+    #colll {
+        flex: 1 0 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    #colll {
+        flex: 1 0 90%; 
+    }
+}
+
+
+
+
+
+/* 03 */
+
+#roww {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+#collll {
+    flex: 1; 
+    max-width: 300px; 
+}
+
+
+#cardddd {
+    height: 100%; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s;
+}
+
+#cardddd:hover {
+    transform: scale(1.05); 
+}
+
+#cardddd-img-top {
+    width: 100%; 
+    height: auto; 
+}
+
+
+@media (max-width: 768px) {
+    #collll {
+        flex: 1 0 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    #collll {
+        flex: 1 0 90%; 
+    }
+}
+
+
+
+
+
+
+
+
+
+/* 04 */
+
+.grid-container-coc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand-card-coc {
+    flex: 1 1 calc(33.33% - 40px); /* 3 cards per row with gap */
+    max-width: calc(33.33% - 40px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.brand-card-coc img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.view-button-coc {
+    margin-top: 20px;
+    padding: 2px 105px ;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+}
+
+.view-button-coc:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brand-card-coc {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-card-coc {
+        flex: 1 1 100%; /* 1 card per row on mobile */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+    border-top: 1px solid #666;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-column h3 {
+    font-weight: bold;
+}
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-top: 1px solid #666;
+}
+.social-icons a {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .Signup {
+            border: 1px solid black;
+            width: 90%; /* Make it responsive */
+            max-width: 400px; /* Maximum width */
+            background: url('https://up.yimg.com/ib/th?id=OIP.pwXD9YElPcHanGG1cR40AwHaEo&pid=Api&rs=1&c=1&qlt=95&w=150&h=93');
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 24px;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        label {
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.3);
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            padding: 0px 20px;
+            border: none;
+            margin-bottom: 20px;
+            color: black;
+            width: 100%; /* Full width */
+            padding-right: 0px;
+        }
+
+        button {
+            background: rgba(45, 126, 231);
+            height: 40px;
+            line-height: 40px;
+            border-radius: 40px;
+            border: none;
+            margin: 10px 0px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: white;
+            cursor: pointer;
+            width: 100%; /* Full width */
+        }
+
+        button:hover {
+            background: rgba(30, 100, 200);
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="Signup">
+        <h1>Sign Up</h1>
+        <label>E-mail</label>
+        <input id="email" type="email" required>
+        <label>Password</label>
+        <input id="password" type="password" required>
+        <button onclick="handleSignup()">Submit</button>
+
+        <span>
+            <h4 style="
+                background-color: rgba(255, 255, 255, 0.7);
+                color: black;
+                padding: 10px;
+                border-radius: 10px;
+                font-weight: normal;
+                font-size: 14px;
+                text-align: center;
+            ">
+                Already have an account? 
+                <a style="color: rgb(34, 117, 240); font-weight: bold; font-size: 14px;" href="./login.html">Log in</a>
+            </h4>
+        </span>
+
+    </div>
+</center>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
